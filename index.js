@@ -74,7 +74,7 @@ module.exports = function(newman, options) {
         newman.exports.push({
             name: 'newman-reporter-json-latency-summary',
             default: 'summary.json',
-            path:  options.jsonLatencySummary,
+            path:  options.jsonLatencySummaryExport,
             content: JSON.stringify(createSummary(data.summary))
         });
     });
