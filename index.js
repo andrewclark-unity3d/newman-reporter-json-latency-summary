@@ -34,7 +34,7 @@ function createSummary(summary) {
                             .value();
     groupedIterations.forEach(function(groupedIteration) {
         iterations.push({
-            'Iteration': groupedIteration.iteration + 1,
+            'Iteration': parseInt(groupedIteration.iteration) + 1,
             'TotalTime': groupedIteration.totalTime,
             'Requests': groupedIteration.executions.map((value, key) => ({
                 'Name': value.item.name,
