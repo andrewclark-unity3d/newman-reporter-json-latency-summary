@@ -6,9 +6,9 @@ This Newman reporter generates an artifact containing failures, total response t
 
 Install:
 
-This package is not published. To use, run the command
+To use, run the command
 
-npm install path/to/reporter-directory
+npm i -g newman-reporter-json-latency-summary
 
 ---
 
