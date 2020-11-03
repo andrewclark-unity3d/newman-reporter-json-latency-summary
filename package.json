@@ -1,0 +1,23 @@
+{
+  "name": "newman-reporter-json-latency-summary",
+  "description": "A custom Newman Reporter that reports failures and aggregate timings for each iteration.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrewclark-unity3d/newman-reporter-json-timing.git"
+  },
+  "keywords": [],
+  "author": "andrew.clark@unity3d.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewclark-unity3d/newman-reporter-json-timing/issues"
+  },
+  "dependencies": {
+    "lodash": ">=4.17.15",
+    "newman": ">=4.6.1"
+  }
+}
