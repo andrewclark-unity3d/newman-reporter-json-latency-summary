@@ -27,14 +27,14 @@ function createSummary(summary) {
     var groupedIterations = _(summary.run.executions)
                             .groupBy(e => e.cursor.iteration)
                             .map((value, key) => ({
-                                iteration: key + 1, 
+                                iteration: key, 
                                 executions: value,
                                 totalTime: _.sumBy(value, 'response.responseTime')
                             }))
                             .value();
     groupedIterations.forEach(function(groupedIteration) {
         iterations.push({
-            'Iteration': groupedIteration.iteration,
+            'Iteration': groupedIteration.iteration + 1,
             'TotalTime': groupedIteration.totalTime,
             'Requests': groupedIteration.executions.map((value, key) => ({
                 'Name': value.item.name,
@@ -74,7 +74,7 @@ module.exports = function(newman, options) {
         newman.exports.push({
             name: 'newman-reporter-json-latency-summary',
             default: 'summary.json',
-            path:  options.latencySummaryJsonExport,
+            path:  options.jsonLatencySummary,
             content: JSON.stringify(createSummary(data.summary))
         });
     });
