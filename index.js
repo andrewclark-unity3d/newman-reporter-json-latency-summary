@@ -27,7 +27,7 @@ function createSummary(summary) {
     var groupedIterations = _(summary.run.executions)
                             .groupBy(e => e.cursor.iteration)
                             .map((value, key) => ({
-                                iteration: key, 
+                                iteration: key + 1, 
                                 executions: value,
                                 totalTime: _.sumBy(value, 'response.responseTime')
                             }))

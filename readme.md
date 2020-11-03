@@ -15,7 +15,7 @@ npm i -g newman-reporter-json-latency-summary
 Usage:
 
 newman run path/to/collection.json \
--e path/to/environment.json.json \
+-e path/to/environment.json \
 -d path/to/iteration-data.csv \
 -r json-latency-summary,cli \
 --reporter-json-latency-summary-export path/to/report.json
